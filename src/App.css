@@ -1,38 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  background-color: #fcfbfa;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
 .App {
+  
   text-align: center;
+  
+}
+.login-main, .signup-main, .reset-main{
+  display: flex;
+  flex-direction: row;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-lft {
+  height: 100vh;
+  width: 50%;
+  background-color: #93859D;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: -10px ;
+}
+
+.login-rt {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+}
+.inn-rt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 80%;
 }
 
-.App-link {
-  color: #61dafb;
+.md-img {
+  width: 150px;
+  height: 22px;
+  margin: 17px;
+  padding-right: 75%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mid-img{
+  width: 500px;
+  height: 392px;
+  margin: 55px;
+}
+
+.ttl {
+  color: rgb(38, 11, 59);
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.p-ln {
+  color: rgb(154, 142, 164);
+  font-size: 24px;
+  font-weight: 500;
+}
+.input-hd {
+  color: rgb(38, 11, 59);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.form-input {
+  background-color: rgb(255, 255, 255);
+  height: 40px;
+  width: 100%;
+  font-size: medium;
+  border-radius: 8px;
+  border-top: 1px solid rgb(201, 194, 206); 
+  border-color: rgb(201, 194, 206);
+  border-width: 1px;
+  padding-left: 1%;
+}
+
+.f-pwd{
+  display: flex;
+  flex-direction: row;
+  gap: 420px
+}
+.f-pwd, .reg-link, .error-msg {
+  color: rgb(243, 117, 89);
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.log-btn {
+  background-color: #F3775B;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.name-div {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  gap: 10%;
+  width: 100%;
+}
+
+.fname, .lname {
+  width: 45%;
+}
+
+.dash-con {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: #f5f2ec;
+  padding: 20px;
+}
+
+.left {
+  flex: 3 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 100vh;
+  overflow-y: auto;
+  
+}
+.right {
+  flex: 6;
+  background-color: #ffffff;
+  height: 95vh;
+  border-radius: 22px;
+  overflow-y: auto;
+  margin-left: 10px;
+}
+.dash, .cart, .product-form  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid rgb(184, 176, 176) 1px;
+  background-color: #ffffff;
+  border-radius: 22px;
+  width: 500px;
+  min-height: 300px;
+  max-height: 300px;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
+
+.dash img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.dash button, .cart-btn {
+  background-color: #F3775B;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.l-item {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.l-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #888;
+}
+
+.l-item h3 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.l-item div {
+  margin-top: 10px;
+}
+
+/* Styling for product ID */
+.l-item p#product-id {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Styling for product title */
+.l-item h3#product-title {
+  color: #333;
+}
+
+/* Styling for product body (description) */
+.l-item p#product-body {
+  font-style: italic;
+}
+
+.p-img {
+  width: 150px;
+  max-width: 150px;
+  height: 150px;
+  max-height: 150px;
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.products-list .l-item {
+  flex: 1 1 calc(33.333% - 20px); /* Adjust the width and margin */
+  margin: 10px;
+  box-sizing: border-box;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.p-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 22px;
+}
+
+ .cart-i{
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: row;
+  gap: 20px;
+  width: 90%;
+}
+
+.cart {
+  overflow-y: auto;
+}
+
+/* Add these styles to your CSS file */
+
+
+.product-form h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.product-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #F3775B;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cart-btn {
+  max-width: 80px;
+  min-width: 80px;
+  background-color: chocolate;
+  cursor: pointer;
+}
+
+.update-btn {
+  background-color: #F3775B;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
+  width: 80%;
+  border-radius: 8px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.product-form > input {
+  width: 90%;
 }
